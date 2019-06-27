@@ -4,7 +4,7 @@ from timeit import default_timer as timer
 import numpy as np
 import matplotlib.pyplot as plt
 
-timeLimit = 10800 #TODO update to 10800, 3 h
+timeLimit = 10 #TODO update to 10800, 3 h
 #  Insertion Sort  #
 def Insertion_sort(A):
  start = timer()
@@ -63,7 +63,7 @@ def random_vect(B):
 #  dimensione del vettore dei numeri da ordinare
 
 
-numbervect = [10,100, 500, 1000, 5000, 10000, 100000, 500000, 1000000]
+numbervect = [10, 20, 30, 40, 50, 100, 500, 1000, 2000, 3000, 5000, 10000, 20000, 3000, 40000, 60000, 80000, 100000]
 insertionSortGraph = []
 mergeSortGraph = []
 
@@ -90,12 +90,15 @@ for j in numbervect:
 
 #         Plot GUI
 
-plt.plot(numbervect, mergeSortGraph)
-plt.plot(numbervect, insertionSortGraph)
-plt.xlabel('Numero di elementi')
-plt.ylabel('Tempo di esecuzione')
-plt.title('Merge sort Vs Insertion sort Benchmark')
-plt.legend(['Merge sort', 'Insertion sort'])
-plt.show()
+x = numbervect
+y1 = mergeSortGraph
+y2 = insertionSortGraph
+#plt.plot(numbervect, mergeSortGraph)
+#plt.plot(numbervect, insertionSortGraph)
+#plt.xlabel('Numero di elementi')
+#plt.ylabel('Tempo di esecuzione')
+#plt.title('Merge sort Vs Insertion sort Benchmark')
+#plt.legend(['Merge sort', 'Insertion sort'])
+#plt.show()
 
 
