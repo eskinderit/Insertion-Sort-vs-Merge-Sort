@@ -4,7 +4,7 @@ from timeit import default_timer as timer
 import numpy as np
 import matplotlib.pyplot as plt
 
-timeLimit = 10 #TODO update to 10800, 3 h
+timeLimit = 1000 # Tempo Limite
 #  Insertion Sort  #
 def Insertion_sort(A):
  start = timer()
@@ -56,14 +56,17 @@ def Merge(A,p,q,r):
 #  Creo vettori random di numeri  #
 def random_vect(B):
     A=[]
+    random.seed(2)
     for i in range(B):
-      A.append(random.randint(-100,100)) #TODO random.seed
+      A.append(random.randint(0, 10000)) #TODO random.seed
     return A
 
 #  dimensione del vettore dei numeri da ordinare
 
 
-numbervect = [10, 20, 30, 40, 50, 100, 500, 1000, 2000, 3000, 5000, 10000, 20000, 3000, 40000, 60000, 80000, 100000]
+numbervect = []
+for i in range(20):
+    numbervect.append(i)
 insertionSortGraph = []
 mergeSortGraph = []
 
@@ -93,12 +96,12 @@ for j in numbervect:
 x = numbervect
 y1 = mergeSortGraph
 y2 = insertionSortGraph
-#plt.plot(numbervect, mergeSortGraph)
-#plt.plot(numbervect, insertionSortGraph)
-#plt.xlabel('Numero di elementi')
-#plt.ylabel('Tempo di esecuzione')
-#plt.title('Merge sort Vs Insertion sort Benchmark')
-#plt.legend(['Merge sort', 'Insertion sort'])
-#plt.show()
+plt.plot(numbervect, mergeSortGraph)
+plt.plot(numbervect, insertionSortGraph)
+plt.xlabel('Numero di elementi')
+plt.ylabel('Tempo di esecuzione')
+plt.title('Merge sort Vs Insertion sort Benchmark')
+plt.legend(['Merge sort', 'Insertion sort'])
+plt.show()
 
 
