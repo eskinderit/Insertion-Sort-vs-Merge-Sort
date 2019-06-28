@@ -3,14 +3,17 @@ import math
 from timeit import default_timer as timer
 import numpy as np
 import matplotlib.pyplot as plt
+import statistics
 
-timeLimit = 1000 # Tempo Limite
+timeLimit = 100 # Tempo Limite
+
 #  Insertion Sort  #
+
 def Insertion_sort(A):
  start = timer()
  for i in range(1, len(A)):
   if timer()-start > timeLimit:
-     print("Tempo Limite Superato")
+     print("ERRORE: Tempo Limite Superato")
      return timeLimit
   else:
      key = A[i]
@@ -20,16 +23,15 @@ def Insertion_sort(A):
         j = j-1
      A[j+1] = key
  end = timer()
- print(end-start)
  return end-start
 
 #   Merge Sort   #
 
-def Merge_sort(A, p, r):
+def MergeSort(A, p, r):
     if p < r :
         q = (p+r) // 2
-        Merge_sort(A, p, q)
-        Merge_sort(A, q+1, r)
+        MergeSort(A, p, q)
+        MergeSort(A, q+1, r)
         Merge(A, p, q, r)
 
 def Merge(A,p,q,r):
@@ -53,43 +55,53 @@ def Merge(A,p,q,r):
             A[k] = R[j]
             j = j + 1
 
-#  Creo vettori random di numeri  #
+#  Creo vettore random di B numeri  #
+
 def random_vect(B):
     A=[]
-    random.seed(2)
     for i in range(B):
       A.append(random.randint(0, 10000)) #TODO random.seed
     return A
 
 #  dimensione del vettore dei numeri da ordinare
 
+def MergeSortMask(A, p, r):
+    start = timer()
+    MergeSort(A,p,r)
+    end = timer()
+    return end-start
 
+
+####################################### SIMULAZIONE #####################################
+
+# Creazione di vettori random con passo "step"
+
+step = 5000
 numbervect = []
-for i in range(20):
-    numbervect.append(i)
+for i in range(10):
+    numbervect.append(i*step)
+
 insertionSortGraph = []
 mergeSortGraph = []
 
 
 for j in numbervect:
 
-  print("_____ Numeri da ordinare: ", j, "_____")
-  A = random_vect(j)
-  B = A.copy()
+  print("####### Numeri da ordinare: ", j, "#######")
 
-  #    Esecuzione Insertion Sort
-
-  print("Tempo Insertion Sort")
-  insertionSortGraph.append(Insertion_sort(A))
-
-  #   Esecuzione Merge Sort   (timer messo fuori per comodita')
-
-  start = timer()
-  Merge_sort(B, 0, len(B)-1)
-  end = timer()
-  mergeSortGraph.append(end-start)
-
-  print("Tempo Merge Sort", "\n", end - start, "\n", "_____Ordinamento terminato_____", "\n")
+  RI = [] # Repeated Insertion
+  RM = [] # Repeated Merge
+  for z in range(1,2):   #Indico come secondo numero il numero di volte che viene ripetuto l'esperimento
+        A = random_vect(j)
+        B = A.copy()
+        RI.append(Insertion_sort(A))
+        RM.append(MergeSortMask(B, 0, len(B) - 1))
+  I1=(statistics.mean(RI))
+  I2=(statistics.mean(RM))
+  print("Tempo Insertion Sort: ", I1)
+  print("Tempo Merge Sort: ", I2)
+  insertionSortGraph.append(I1)
+  mergeSortGraph.append(I2)
 
 #         Plot GUI
 
@@ -105,3 +117,4 @@ plt.legend(['Merge sort', 'Insertion sort'])
 plt.show()
 
 
+#TODO aggiungere parametri stabili di confronto
