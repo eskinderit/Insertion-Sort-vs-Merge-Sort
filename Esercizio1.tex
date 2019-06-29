@@ -1,12 +1,56 @@
-\documentclass{article}
-\usepackage{blindtext}
-\title {Insertion Sort and Merge Sort}
-\author{Alessandro D'Amico}
+\documentclass[a4paper]{article}
+\usepackage[italian]{babel}
+\font\TitleFont=cmr12 at 50pt
+\font\AuthFont=cmr13 at 20pt
+\font\ChapFont=cmr12 at 30 pt
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage[section]{placeins}
+
+\title {{\TitleFont Esercizio 1}}
+\date{3 Luglio 2019}
+\author{{\AuthFont Alessandro D'Amico}}
+
+
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
 
 \begin{document}
-	\pagenumbering{arabic}
-	\maketitle
-	\newpage
-	Testo di prova. \\
-	testo di prova a capo
+\begin{titlingpage}
+\maketitle
+\end{titlingpage}
+\tableofcontents
+\newpage
+\section{Introduzione al problema}
+Nel seguente esperimento viene preso in considerazione il problema dell'ordinamento, per la cui soluzione utilizziamo due differenti algoritmi: Insertion Sort e Merge Sort.
+Lo scopo e' ottenere un array i cui elementi che lo compongono (inizialmente disposti in modo casuale) siano disposti in ordine crescente.
+\section{Caratteristiche teoriche di algoritmi e e strutture utilizzate}
+Insertion
+\section{Prestazioni attese}
+\section{Esperimenti}
+\section{Documentazione del codice}
+\newpage
+\section{Risultati}
+Sono stati effettuati i test con piu set di numeri (set da 10, 100, 1000 valori), tenendo conto del fatto che la dimensione di ogni singolo numero (in termini di cifre) non incide sulla nostra analisi, trattandosi di algoritmi per confronto (non si tiene conto del max o del min). E' dunque necessario distinguere due casi, a seconda che si usi un set ridotto o un set di grandi dimensioni. 
+\subsection{Per pochi input}
+Dalla Figura \ref{fig:SmallInsMerge} traspare che per ordinare meno di 80 numeri Insertion Sort risulta piu' veloce (cio' e' dovuto principalmente al tempo impiegato al caricamento delle funzioni sulla stack).	
+		\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.5]{myplot}
+		\caption{Merge Sort vs Insertion Sort per pochi input}
+		\label{fig:SmallInsMerge}
+		\end{figure}
+\newpage		
+\subsection{Per tanti input}
+Grazie alla figura \ref{fig:BigInsMerge} e' facilmente deducibile che per grandi set di numeri da ordinare Merge Sort  e' sensibilmente piu' rapido rispetto a Insertion Sort 
+ 
+		\begin{figure}[!htb]
+		\centering
+		\includegraphics[scale=0.5]{myplot2}
+		\caption{Merge Sort vs Insertion Sort per molti input}
+		\label{fig:BigInsMerge}
+		\end{figure}
+
+\section{Conclusioni}
+E' stato verificato il comportamento asintotico di Insertion Sort e Merge $\longrightarrow$  \(\infty\)
 \end{document}

@@ -1,0 +1,11 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {section}{\numberline {1}Introduzione al problema}{2}
+\contentsline {section}{\numberline {2}Caratteristiche teoriche di algoritmi e e strutture utilizzate}{2}
+\contentsline {section}{\numberline {3}Prestazioni attese}{2}
+\contentsline {section}{\numberline {4}Esperimenti}{2}
+\contentsline {section}{\numberline {5}Documentazione del codice}{2}
+\contentsline {section}{\numberline {6}Risultati}{3}
+\contentsline {subsection}{\numberline {6.1}Per pochi input}{3}
+\contentsline {subsection}{\numberline {6.2}Per tanti input}{4}
+\contentsline {section}{\numberline {7}Conclusioni}{4}

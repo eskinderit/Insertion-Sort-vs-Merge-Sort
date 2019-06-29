@@ -4,6 +4,7 @@ from timeit import default_timer as timer
 import numpy as np
 import matplotlib.pyplot as plt
 import statistics
+import pickle
 
 timeLimit = 100 # Tempo Limite
 
@@ -74,9 +75,11 @@ def MergeSortMask(A, p, r):
 
 ####################################### SIMULAZIONE #####################################
 
+
+
 # Creazione di vettori random con passo "step"
 
-step = 5000
+step = 10000
 numbervect = []
 for i in range(10):
     numbervect.append(i*step)
@@ -91,7 +94,7 @@ for j in numbervect:
 
   RI = [] # Repeated Insertion
   RM = [] # Repeated Merge
-  for z in range(1,2):   #Indico come secondo numero il numero di volte che viene ripetuto l'esperimento
+  for z in range(1, 5):   #Indico come secondo numero il numero di volte che viene ripetuto l'esperimento + 1
         A = random_vect(j)
         B = A.copy()
         RI.append(Insertion_sort(A))
@@ -114,6 +117,10 @@ plt.xlabel('Numero di elementi')
 plt.ylabel('Tempo di esecuzione')
 plt.title('Merge sort Vs Insertion sort Benchmark')
 plt.legend(['Merge sort', 'Insertion sort'])
+
+#plt.axis('equal')
+#plt.axis([0, 0.5, 0, 500])
+
 plt.show()
 
 
