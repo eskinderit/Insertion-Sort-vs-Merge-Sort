@@ -6,9 +6,10 @@ import matplotlib.pyplot as plt
 import statistics
 import pickle
 
-timeLimit = 100 # Tempo Limite
+timeLimit = 1000  # Tempo Limite
 
 #  Insertion Sort  #
+
 
 def Insertion_sort(A):
  start = timer()
@@ -28,12 +29,14 @@ def Insertion_sort(A):
 
 #   Merge Sort   #
 
+
 def MergeSort(A, p, r):
     if p < r :
         q = (p+r) // 2
         MergeSort(A, p, q)
         MergeSort(A, q+1, r)
         Merge(A, p, q, r)
+
 
 def Merge(A,p,q,r):
     n1=q-p+1
@@ -58,19 +61,29 @@ def Merge(A,p,q,r):
 
 #  Creo vettore random di B numeri  #
 
+
 def random_vect(B):
     A=[]
     for i in range(B):
       A.append(random.randint(0, 10000)) #TODO random.seed
     return A
 
-#  dimensione del vettore dei numeri da ordinare
+
 
 def MergeSortMask(A, p, r):
     start = timer()
     MergeSort(A,p,r)
     end = timer()
     return end-start
+
+
+def multiple_random_vect(MultipleNumberVect, step1):
+    numbervect1 = []
+    for i in range(10):
+        numbervect1.append(i*step1)
+    for j in range(len(numbervect1)):
+        MultipleNumberVect.append(random_vect(numbervect1[j]))
+    return MultipleNumberVect
 
 
 ####################################### SIMULAZIONE #####################################
@@ -94,7 +107,7 @@ for j in numbervect:
 
   RI = [] # Repeated Insertion
   RM = [] # Repeated Merge
-  for z in range(1, 5):   #Indico come secondo numero il numero di volte che viene ripetuto l'esperimento + 1
+  for z in range(1, 2):   #Indico come secondo numero il numero di volte che viene ripetuto l'esperimento + 1
         A = random_vect(j)
         B = A.copy()
         RI.append(Insertion_sort(A))
@@ -117,11 +130,22 @@ plt.xlabel('Numero di elementi')
 plt.ylabel('Tempo di esecuzione')
 plt.title('Merge sort Vs Insertion sort Benchmark')
 plt.legend(['Merge sort', 'Insertion sort'])
-
-#plt.axis('equal')
-#plt.axis([0, 0.5, 0, 500])
-
 plt.show()
 
 
-#TODO aggiungere parametri stabili di confronto
+# ATTENZIONE, NON SBLOCCARE QUESTA PARTE: IL DATASET DI BASE VIENE MODIFICATO !!!
+# Standard Data set to compare algs
+
+
+SavedDataSet = []
+multiple_random_vect(SavedDataSet, 3)
+
+pickle_out = open("dataset.pickle", "wb")
+pickle.dump(SavedDataSet, pickle_out)
+pickle_out.close()
+
+#Standard Data set read
+
+pickle_in = open("dataset.pickle", "rb")
+esempio = pickle.load(pickle_in)
+print(esempio)
