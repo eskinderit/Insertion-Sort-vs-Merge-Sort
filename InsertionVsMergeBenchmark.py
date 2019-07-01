@@ -69,6 +69,19 @@ def random_vect(B):
     return A
 
 
+def incr_vect(B):
+    A=[]
+    for i in range(B+1):
+        A.append(i)
+    return A
+
+
+def decr_vect(B):
+    A=[]
+    for i in range(B,-1,-1):
+        A.append(i)
+    return A
+
 
 def MergeSortMask(A, p, r):
     start = timer()
@@ -87,8 +100,6 @@ def multiple_random_vect(MultipleNumberVect, step1):
 
 
 ####################################### SIMULAZIONE #####################################
-
-
 
 # Creazione di vettori random con passo "step"
 
@@ -149,3 +160,12 @@ pickle_out.close()
 pickle_in = open("dataset.pickle", "rb")
 esempio = pickle.load(pickle_in)
 print(esempio)
+
+#CON DATA SET
+
+# Insertion e merge ordinati cresc
+# Insertion e merge sort ordinati decr
+# Insertion e merge sort random
+
+#CON GENERATORE RANDOM
+
