@@ -101,70 +101,65 @@ def multiple_random_vect(MultipleNumberVect, step1):
 
 ####################################### SIMULAZIONE #####################################
 
-# Creazione di vettori random con passo "step"
-
-step = 10
-numbervect = []
-for i in range(20 + 1):
-    numbervect.append(i*step)
-
-insertionSortGraph = []
-mergeSortGraph = []
-
-
-for j in numbervect:
-
-  print("####### Numeri da ordinare: ", j, "#######")
-
-  RI = [] # Repeated Insertion
-  RM = [] # Repeated Merge
-  for z in range(1, 1000):   #Indico come secondo numero il numero di volte che viene replicato l'esperimento + 1
-        A = random_vect(j)
-        B = A.copy()
-        RI.append(Insertion_sort(A))
-        RM.append(MergeSortMask(B, 0, len(B) - 1))
-  I1=(statistics.mean(RI))
-  I2=(statistics.mean(RM))
-  print("Tempo Insertion Sort: ", I1)
-  print("Tempo Merge Sort: ", I2)
-  insertionSortGraph.append(I1)
-  mergeSortGraph.append(I2)
-
-#         Plot GUI
-
-x = numbervect
-y1 = mergeSortGraph
-y2 = insertionSortGraph
-plt.plot(numbervect, mergeSortGraph)
-plt.plot(numbervect, insertionSortGraph)
-plt.xlabel('Numero di elementi')
-plt.ylabel('Tempo di esecuzione')
-plt.title('Merge sort Vs Insertion sort Benchmark')
-plt.legend(['Merge sort', 'Insertion sort'])
-plt.show()
-
-
-# ATTENZIONE, NON SBLOCCARE QUESTA PARTE: IL DATASET DI BASE VIENE MODIFICATO !!!
-# Standard Data set to compare algs
-
-
-SavedDataSet = []
-multiple_random_vect(SavedDataSet, 3)
-
-pickle_out = open("dataset.pickle", "wb")
-pickle.dump(SavedDataSet, pickle_out)
-pickle_out.close()
-
 #Standard Data set read
 
-pickle_in = open("dataset.pickle", "rb")
-esempio = pickle.load(pickle_in)
-print(esempio)
 
-#CON DATA SET
 
-# Insertion e merge ordinati cresc
-# Insertion e merge sort ordinati decr
-# Insertion e merge sort random
-#CON GENERATORE RANDOM
+def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file sorgente
+ insertionSortGraph=[]
+ mergeSortGraph=[]
+ print("INIZIO TEST DI CONFRONTO: ", Setfile)
+ pickle_in = open(Setfile, "rb")
+ Set = pickle.load(pickle_in)
+ for j in range(0, len(Set)):
+     print("Passo: ",j+1,"/", len(Set), " Elementi: ",len(Set[j]))
+     IS = []
+     MS = []
+     for i in range(0, rep + 1):  # numero di ripetizioni
+        Set = []
+        pickle_in = open(Setfile, "rb")
+        Set = pickle.load(pickle_in)
+        SetCopy = Set.copy()
+        IS.append(Insertion_sort(Set[j]))
+        MS.append(MergeSortMask(SetCopy[j], 0, len(SetCopy[j])-1))
+     ISAverage = (statistics.mean(IS))
+     MSAverage = (statistics.mean(MS))
+     print("Il tempo impiegato da Insertion Sort e' :", ISAverage)
+     print("Il tempo impiegato da Merge Sort e': ", MSAverage)
+     insertionSortGraph.append(ISAverage)
+     mergeSortGraph.append(MSAverage)
 
+ # PLOT
+ Set = []
+ ElementsNum=[]
+ pickle_in = open(Setfile, "rb")
+ Set = pickle.load(pickle_in)
+ for z in range(0,len(Set)):
+     A=Set[z]
+     print(A)
+     ElementsNum.append(len(A))
+ plt.plot(ElementsNum, mergeSortGraph)
+ plt.plot(ElementsNum, insertionSortGraph)
+ plt.xlabel('Numero di elementi')
+ plt.ylabel('Tempo di esecuzione')
+ plt.title('Merge sort Vs Insertion sort Benchmark')
+ plt.legend(['Merge sort', 'Insertion sort'])
+ plt.show()
+
+# insertion sort best case
+
+
+testComparison(4, "incrBigDataset.pickle")
+testComparison(900, "incrSmallDataset.pickle")
+
+
+# insertion sort worst case
+
+
+testComparison(4, "decrBigDataset.pickle")
+testComparison(900, "decrSmallDataset.pickle")
+
+# average case
+
+testComparison(4, "randomBigDataset.pickle")
+testComparison(900, "randomSmallDataset.pickle")

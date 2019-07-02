@@ -66,7 +66,7 @@ pickle_out.close()
 
 ################### DECREASING ORD BIG DATA SET ######################
 SavedDataSet = []
-multiple_decr_vect(SavedDataSet, 5000,20)
+multiple_decr_vect(SavedDataSet, 5000, 20)
 pickle_out = open("decrBigDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
@@ -87,21 +87,13 @@ pickle_out.close()
 
 ################### DECREASING ORD SMALL DATA SET ######################
 SavedDataSet = []
-multiple_decr_vect(SavedDataSet, 10,20)
+multiple_decr_vect(SavedDataSet, 10, 20)
 pickle_out = open("decrSmallDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
 
 
+print("DATASET IS NOW REFRESHED")
 
 
 
-
-
-#Standard Data set read
-
-pickle_in = open("randomBigDataset.pickle", "rb")
-esempio = pickle.load(pickle_in)
-print(esempio)
-
-A=[]
