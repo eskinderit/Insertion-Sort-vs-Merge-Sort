@@ -103,9 +103,9 @@ def multiple_random_vect(MultipleNumberVect, step1):
 
 # Creazione di vettori random con passo "step"
 
-step = 10000
+step = 10
 numbervect = []
-for i in range(10 + 1):
+for i in range(20 + 1):
     numbervect.append(i*step)
 
 insertionSortGraph = []
@@ -118,7 +118,7 @@ for j in numbervect:
 
   RI = [] # Repeated Insertion
   RM = [] # Repeated Merge
-  for z in range(1, 5):   #Indico come secondo numero il numero di volte che viene replicato l'esperimento + 1
+  for z in range(1, 1000):   #Indico come secondo numero il numero di volte che viene replicato l'esperimento + 1
         A = random_vect(j)
         B = A.copy()
         RI.append(Insertion_sort(A))
