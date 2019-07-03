@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import statistics
 import pickle
 
-timeLimit = 1000  # Tempo Limite
+timeLimit = 1000  # Tempo Limite 16.6 minuti
 
 #  Insertion Sort  #
 
@@ -163,3 +163,5 @@ testComparison(900, "decrSmallDataset.pickle")
 
 testComparison(4, "randomBigDataset.pickle")
 testComparison(900, "randomSmallDataset.pickle")
+
+#da rifare 1,2,5 ma soprattutto 6
