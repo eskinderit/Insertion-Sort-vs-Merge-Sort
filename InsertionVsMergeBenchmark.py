@@ -1,15 +1,15 @@
 import random
 import math
 from timeit import default_timer as timer
-import numpy as np
 import matplotlib.pyplot as plt
 import statistics
 import pickle
 
+# SET TIME LIMIT HERE
+
 timeLimit = 1000  # Limits Time 16.6 mins
 
 #  Insertion Sort  #
-
 
 def Insertion_sort(A):
  start = timer()
@@ -29,7 +29,6 @@ def Insertion_sort(A):
 
 #   Merge Sort   #
 
-
 def MergeSort(A, p, r):
     if p < r :
         q = (p+r) // 2
@@ -37,6 +36,7 @@ def MergeSort(A, p, r):
         MergeSort(A, q+1, r)
         Merge(A, p, q, r)
 
+#   Merge   #
 
 def Merge(A,p,q,r):
     n1=q-p+1
@@ -59,7 +59,7 @@ def Merge(A,p,q,r):
             A[k] = R[j]
             j = j + 1
 
-#  Creo vettore random di B numeri  #
+#  Creates random vector of B int nums  #
 
 def random_vect(B):
     A=[]
@@ -67,6 +67,7 @@ def random_vect(B):
       A.append(random.randint(0, 10000)) #TODO random.seed
     return A
 
+# Creates (increasing) order vect of B int nums  #
 
 def incr_vect(B):
     A=[]
@@ -74,6 +75,7 @@ def incr_vect(B):
         A.append(i)
     return A
 
+# Creates (decreasing) order vect of B int nums #
 
 def decr_vect(B):
     A=[]
@@ -81,6 +83,7 @@ def decr_vect(B):
         A.append(i)
     return A
 
+# Merge sort with mask that returns timer #
 
 def MergeSortMask(A, p, r):
     start = timer()
@@ -88,6 +91,7 @@ def MergeSortMask(A, p, r):
     end = timer()
     return end-start
 
+# Creates an array of arrays made of random numbers. MultipleNumbersVect MUST be empty
 
 def multiple_random_vect(MultipleNumberVect, step1):
     numbervect1 = []
@@ -97,6 +101,7 @@ def multiple_random_vect(MultipleNumberVect, step1):
         MultipleNumberVect.append(random_vect(numbervect1[j]))
     return MultipleNumberVect
 
+# Merge vs Insertion comparison with the data set you want to use
 
 def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file sorgente
  insertionSortGraph=[]
@@ -138,6 +143,7 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
  plt.legend(['Merge sort', 'Insertion sort'])
  plt.show()
 
+# tests merge sort with datasets defined inside
 
 def mergeTestComparison(rep):  # indico il numero di ripetizioni ed il file sorgente
      Setfile1="randomSmallDataset.pickle"
@@ -212,6 +218,7 @@ def mergeTestComparison(rep):  # indico il numero di ripetizioni ed il file sorg
      plt.legend(['Input random', 'Input in ord. crescente', 'Input in ord. decr'])
      plt.show()
 
+# test insertion sort with datasets defined inside
 
 def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file sorgente
      Setfile1="randomSmallDataset.pickle"
@@ -285,8 +292,6 @@ def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file 
      plt.title('I casi di insertion sort')
      plt.legend(['Input random', 'Input in ord. crescente', 'Input in ord. decr'])
      plt.show()
-
-
 
 ####################################### SIMULAZIONE #####################################
 
