@@ -80,14 +80,14 @@ pickle_out.close()
 
 ################### INCREASING ORD SMALL DATA SET #######################
 SavedDataSet = []
-multiple_incr_vect(SavedDataSet, 20, 10)
+multiple_incr_vect(SavedDataSet, 40, 5)
 pickle_out = open("incrSmallDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
 
 ################### DECREASING ORD SMALL DATA SET ######################
 SavedDataSet = []
-multiple_decr_vect(SavedDataSet, 20, 10)
+multiple_decr_vect(SavedDataSet, 40, 5)
 pickle_out = open("decrSmallDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()

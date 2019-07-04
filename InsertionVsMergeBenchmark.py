@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import statistics
 import pickle
 
-timeLimit = 1000  # Tempo Limite 16.6 minuti
+timeLimit = 1000  # Limits Time 16.6 mins
 
 #  Insertion Sort  #
 
@@ -61,7 +61,6 @@ def Merge(A,p,q,r):
 
 #  Creo vettore random di B numeri  #
 
-
 def random_vect(B):
     A=[]
     for i in range(B):
@@ -97,12 +96,6 @@ def multiple_random_vect(MultipleNumberVect, step1):
     for j in range(len(numbervect1)):
         MultipleNumberVect.append(random_vect(numbervect1[j]))
     return MultipleNumberVect
-
-
-####################################### SIMULAZIONE #####################################
-
-#Standard Data set read
-
 
 
 def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file sorgente
@@ -145,15 +138,164 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
  plt.legend(['Merge sort', 'Insertion sort'])
  plt.show()
 
-# insertion sort best case
 
+def mergeTestComparison(rep):  # indico il numero di ripetizioni ed il file sorgente
+     Setfile1="randomSmallDataset.pickle"
+     Setfile2="incrSmallDataset.pickle"
+     Setfile3="decrSmallDataset.pickle"
+     mergeSortGraph1 = []
+     mergeSortGraph2 = []
+     mergeSortGraph3 = []
+     print("INIZIO TEST DI CONFRONTO: ", Setfile1)
+     pickle_in = open(Setfile1, "rb")
+     Set = pickle.load(pickle_in)
+     for j in range(0, len(Set)):
+         print("Passo: ", j + 1, "/", len(Set), " Elementi: ", len(Set[j]))
+         MS = []
+         for i in range(0, rep + 1):  # numero di ripetizioni
+             Set = []
+             pickle_in = open(Setfile1, "rb")
+             Set = pickle.load(pickle_in)
+             SetCopy = Set.copy()
+             MS.append(MergeSortMask(SetCopy[j], 0, len(SetCopy[j]) - 1))
+         MSAverage = (statistics.mean(MS))
+         print("Il tempo impiegato da Merge Sort (input random) e': ", MSAverage)
+         mergeSortGraph1.append(MSAverage)
+
+     print("INIZIO TEST DI CONFRONTO: ", Setfile2)
+     pickle_in = open(Setfile2, "rb")
+     Set = pickle.load(pickle_in)
+     for j in range(0, len(Set)):
+         print("Passo: ", j + 1, "/", len(Set), " Elementi: ", len(Set[j]))
+         MS = []
+         for i in range(0, rep + 1):  # numero di ripetizioni
+             Set = []
+             pickle_in = open(Setfile2, "rb")
+             Set = pickle.load(pickle_in)
+             SetCopy = Set.copy()
+             MS.append(MergeSortMask(SetCopy[j], 0, len(SetCopy[j]) - 1))
+         MSAverage = (statistics.mean(MS))
+         print("Il tempo impiegato da Merge Sort (input incr) e': ", MSAverage)
+         mergeSortGraph2.append(MSAverage)
+
+     print("INIZIO TEST DI CONFRONTO: ", Setfile3)
+     pickle_in = open(Setfile3, "rb")
+     Set = pickle.load(pickle_in)
+     for j in range(0, len(Set)):
+         print("Passo: ", j + 1, "/", len(Set), " Elementi: ", len(Set[j]))
+         MS = []
+         for i in range(0, rep + 1):  # numero di ripetizioni
+             Set = []
+             pickle_in = open(Setfile3, "rb")
+             Set = pickle.load(pickle_in)
+             SetCopy = Set.copy()
+             MS.append(MergeSortMask(SetCopy[j], 0, len(SetCopy[j]) - 1))
+         MSAverage = (statistics.mean(MS))
+         print("Il tempo impiegato da Merge Sort (input decr) e': ", MSAverage)
+         mergeSortGraph3.append(MSAverage)
+
+     # PLOT
+
+     Set = []
+     ElementsNum = []
+     pickle_in = open(Setfile1, "rb")
+     Set = pickle.load(pickle_in)
+     for z in range(0, len(Set)):
+         A = Set[z]
+         ElementsNum.append(len(A))
+     plt.plot(ElementsNum, mergeSortGraph1)
+     plt.plot(ElementsNum, mergeSortGraph2)
+     plt.plot(ElementsNum, mergeSortGraph3)
+     plt.xlabel('Numero di elementi')
+     plt.ylabel('Tempo di esecuzione')
+     plt.title('I casi di merge sort')
+     plt.legend(['Input random', 'Input in ord. crescente', 'Input in ord. decr'])
+     plt.show()
+
+
+def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file sorgente
+     Setfile1="randomSmallDataset.pickle"
+     Setfile2="incrSmallDataset.pickle"
+     Setfile3="decrSmallDataset.pickle"
+     insertionSortGraph1 = []
+     insertionSortGraph2 = []
+     insertionSortGraph3 = []
+     print("INIZIO TEST DI CONFRONTO: ", Setfile1)
+     pickle_in = open(Setfile1, "rb")
+     Set = pickle.load(pickle_in)
+     for j in range(0, len(Set)):
+         print("Passo: ", j + 1, "/", len(Set), " Elementi: ", len(Set[j]))
+         IS = []
+         for i in range(0, rep + 1):  # numero di ripetizioni
+             Set = []
+             pickle_in = open(Setfile1, "rb")
+             Set = pickle.load(pickle_in)
+             SetCopy = Set.copy()
+             IS.append(Insertion_sort(Set[j]))
+         ISAverage = (statistics.mean(IS))
+         print("Il tempo impiegato da Insertion Sort (input random) e': ", ISAverage)
+         insertionSortGraph1.append(ISAverage)
+
+     print("INIZIO TEST DI CONFRONTO: ", Setfile2)
+     pickle_in = open(Setfile2, "rb")
+     Set = pickle.load(pickle_in)
+     for j in range(0, len(Set)):
+         print("Passo: ", j + 1, "/", len(Set), " Elementi: ", len(Set[j]))
+         IS = []
+         for i in range(0, rep + 1):  # numero di ripetizioni
+             Set = []
+             pickle_in = open(Setfile2, "rb")
+             Set = pickle.load(pickle_in)
+             SetCopy = Set.copy()
+             IS.append(Insertion_sort(Set[j]))
+         ISAverage = (statistics.mean(IS))
+         print("Il tempo impiegato da Insertion Sort (input incr) e': ", ISAverage)
+         insertionSortGraph2.append(ISAverage)
+
+     print("INIZIO TEST DI CONFRONTO: ", Setfile3)
+     pickle_in = open(Setfile3, "rb")
+     Set = pickle.load(pickle_in)
+     for j in range(0, len(Set)):
+         print("Passo: ", j + 1, "/", len(Set), " Elementi: ", len(Set[j]))
+         IS = []
+         for i in range(0, rep + 1):  # numero di ripetizioni
+             Set = []
+             pickle_in = open(Setfile3, "rb")
+             Set = pickle.load(pickle_in)
+             SetCopy = Set.copy()
+             IS.append(Insertion_sort(Set[j]))
+         ISAverage = (statistics.mean(IS))
+         print("Il tempo impiegato da Merge Sort (input decr) e': ", ISAverage)
+         insertionSortGraph3.append(ISAverage)
+
+     # PLOT
+
+     Set = []
+     ElementsNum = []
+     pickle_in = open(Setfile1, "rb")
+     Set = pickle.load(pickle_in)
+     for z in range(0, len(Set)):
+         A = Set[z]
+         ElementsNum.append(len(A))
+     plt.plot(ElementsNum, insertionSortGraph1)
+     plt.plot(ElementsNum, insertionSortGraph2)
+     plt.plot(ElementsNum, insertionSortGraph3)
+     plt.xlabel('Numero di elementi')
+     plt.ylabel('Tempo di esecuzione')
+     plt.title('I casi di insertion sort')
+     plt.legend(['Input random', 'Input in ord. crescente', 'Input in ord. decr'])
+     plt.show()
+
+
+
+####################################### SIMULAZIONE #####################################
+
+# insertion sort best case
 
 #testComparison(4, "incrBigDataset.pickle")
 #testComparison(900, "incrSmallDataset.pickle")
 
-
 # insertion sort worst case
-
 
 #testComparison(4, "decrBigDataset.pickle")
 #testComparison(900, "decrSmallDataset.pickle")
@@ -161,6 +303,11 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
 # average case
 
 #testComparison(4, "randomBigDataset.pickle")
-testComparison(2000, "randomSmallDataset.pickle")
+#testComparison(2000, "randomSmallDataset.pickle")
 
-#da rifare 1,2,5 ma soprattutto 6
+# same algs multiple tests
+
+mergeTestComparison(100)
+insertionTestComparison(4)
+
+# PER TESTARE CAMBIO I TEST CON I BIG DATASET
