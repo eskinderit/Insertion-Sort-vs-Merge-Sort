@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.14)  2 JUL 2019 00:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  4 JUL 2019 11:08
 entering extended mode
 **./Esercizio1.tex
 (Esercizio1.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+Babel <3.17> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
@@ -22,10 +22,10 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen102
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
-Package: babel 2018/02/14 3.18 The Babel package
+Package: babel 2018/01/24 3.17 The Babel package
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
+File: switch.def 2018/01/24 3.17 Babel switching mechanism
 )
 *************************************
 * Local config file bblopts.cfg used
@@ -38,7 +38,11 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 Language: italian 2019/01/05 v.1.4.01 Italian support for the babel system
 
 ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
-File: babel.def 2018/02/14 3.18 Babel common definitions
+File: babel.def 2018/01/24 3.17 Babel common definitions
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/01/24 3.17 Babel switching mechanism
+)
 \babel@savecnt=\count87
 \U@D=\dimen103
 
@@ -203,8 +207,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 21.
  [1
 
-{C:/Users/Alessandro/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Eserc
-izio1.toc
+{C:/Users/aleda/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Esercizio1
+.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -220,38 +224,71 @@ Underfull \hbox (badness 1655) in paragraph at lines 39--39
  []
 
 [2]
-<myplot.png, id=18, 642.4pt x 481.8pt>
-File: myplot.png Graphic file (type png)
-<use myplot.png>
-Package pdftex.def Info: myplot.png  used on input line 49.
-(pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
- [3 <./myplot.png (PNG copy)>]
-<myplot2.png, id=22, 642.4pt x 481.8pt>
-File: myplot2.png Graphic file (type png)
-<use myplot2.png>
-Package pdftex.def Info: myplot2.png  used on input line 59.
-(pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
- [4 <./myplot2.png (PNG copy)>]
-(Esercizio1.aux) ) 
+<2.png, id=18, 642.4pt x 481.8pt>
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 51.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+<1.png, id=19, 642.4pt x 481.8pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 58.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+ [3 <./2.png (PNG copy)> <./1.png (PNG copy)>]
+<4.png, id=23, 642.4pt x 481.8pt>
+File: 4.png Graphic file (type png)
+<use 4.png>
+Package pdftex.def Info: 4.png  used on input line 70.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+Underfull \hbox (badness 4024) in paragraph at lines 71--71
+[]\OT1/cmr/m/n/10 Figura 3: Mer-ge Sort vs In-ser-tion Sort per po-chi in-put (
+or-di-na-ti
+ []
+
+<3.png, id=24, 642.4pt x 481.8pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 77.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+
+Underfull \hbox (badness 4193) in paragraph at lines 78--78
+[]\OT1/cmr/m/n/10 Figura 4: Mer-ge Sort vs In-ser-tion Sort per mol-ti in-put (
+or-di-na-ti
+ []
+
+[4 <./4.png (PNG copy)> <./3.png (PNG copy)>]
+<6.png, id=28, 642.4pt x 481.8pt>
+File: 6.png Graphic file (type png)
+<use 6.png>
+Package pdftex.def Info: 6.png  used on input line 86.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+<5.png, id=29, 642.4pt x 481.8pt>
+File: 5.png Graphic file (type png)
+<use 5.png>
+Package pdftex.def Info: 5.png  used on input line 93.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+ [5 <./6.png (PNG copy)> <./5.png (PNG copy)>] (Esercizio1.aux) ) 
 Here is how much of TeX's memory you used:
- 2506 strings out of 493305
- 34247 string characters out of 3138859
- 104152 words of memory out of 3000000
- 6024 multiletter control sequences out of 15000+200000
+ 2527 strings out of 493303
+ 34499 string characters out of 3138857
+ 104137 words of memory out of 3000000
+ 6041 multiletter control sequences out of 15000+200000
  8790 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,25p,806b,218s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Alessandro\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\sauter\dpi923\cmr13.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on Esercizio1.pdf (5 pages, 153517 bytes).
+ 41i,10n,25p,806b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\ale
+da\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\sauter\dpi923\cmr13.pk><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb>
+Output written on Esercizio1.pdf (6 pages, 270076 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

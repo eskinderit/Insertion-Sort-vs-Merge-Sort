@@ -6,6 +6,7 @@
 \contentsline {section}{\numberline {4}Esperimenti}{2}
 \contentsline {section}{\numberline {5}Documentazione del codice}{2}
 \contentsline {section}{\numberline {6}Risultati}{3}
-\contentsline {subsection}{\numberline {6.1}Per pochi input}{3}
-\contentsline {subsection}{\numberline {6.2}Per tanti input}{4}
-\contentsline {section}{\numberline {7}Conclusioni}{4}
+\contentsline {subsection}{\numberline {6.1}Input in ordine crescente}{3}
+\contentsline {subsection}{\numberline {6.2}Input in ordine decrescente}{4}
+\contentsline {subsection}{\numberline {6.3}Input in ordine random}{5}
+\contentsline {section}{\numberline {7}Conclusioni}{5}

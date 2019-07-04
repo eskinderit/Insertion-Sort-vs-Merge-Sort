@@ -47,7 +47,7 @@ def multiple_decr_vect(MultipleNumberVect, step1, multi):
 
 
 
-# ATTENZIONE, NON SBLOCCARE QUESTA PARTE: IL DATASET DI BASE VIENE MODIFICATO !!!
+# ATTENZIONE, NON ESEGUIRE QUESTO FILE: IL DATASET DI BASE VIENE MODIFICATO !!!
 # Standard Data set to compare algs
 
 ##################### RANDOM BIG DATA SET #######################
@@ -73,21 +73,21 @@ pickle_out.close()
 
 ##################### RANDOM SMALL DATA SET #######################
 SavedDataSet = []
-multiple_random_vect(SavedDataSet, 10, 20)
+multiple_random_vect(SavedDataSet, 40, 5)
 pickle_out = open("randomSmallDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
 
 ################### INCREASING ORD SMALL DATA SET #######################
 SavedDataSet = []
-multiple_incr_vect(SavedDataSet, 10, 20)
+multiple_incr_vect(SavedDataSet, 20, 10)
 pickle_out = open("incrSmallDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
 
 ################### DECREASING ORD SMALL DATA SET ######################
 SavedDataSet = []
-multiple_decr_vect(SavedDataSet, 10, 20)
+multiple_decr_vect(SavedDataSet, 20, 10)
 pickle_out = open("decrSmallDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()

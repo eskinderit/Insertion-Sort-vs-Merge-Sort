@@ -136,7 +136,6 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
  Set = pickle.load(pickle_in)
  for z in range(0,len(Set)):
      A=Set[z]
-     print(A)
      ElementsNum.append(len(A))
  plt.plot(ElementsNum, mergeSortGraph)
  plt.plot(ElementsNum, insertionSortGraph)
@@ -149,19 +148,19 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
 # insertion sort best case
 
 
-testComparison(4, "incrBigDataset.pickle")
-testComparison(900, "incrSmallDataset.pickle")
+#testComparison(4, "incrBigDataset.pickle")
+#testComparison(900, "incrSmallDataset.pickle")
 
 
 # insertion sort worst case
 
 
-testComparison(4, "decrBigDataset.pickle")
-testComparison(900, "decrSmallDataset.pickle")
+#testComparison(4, "decrBigDataset.pickle")
+#testComparison(900, "decrSmallDataset.pickle")
 
 # average case
 
-testComparison(4, "randomBigDataset.pickle")
-testComparison(900, "randomSmallDataset.pickle")
+#testComparison(4, "randomBigDataset.pickle")
+testComparison(2000, "randomSmallDataset.pickle")
 
 #da rifare 1,2,5 ma soprattutto 6
