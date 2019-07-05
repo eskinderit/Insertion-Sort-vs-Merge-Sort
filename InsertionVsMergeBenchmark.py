@@ -146,9 +146,9 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
 # tests merge sort with datasets defined inside
 
 def mergeTestComparison(rep):  # indico il numero di ripetizioni ed il file sorgente
-     Setfile1="randomSmallDataset.pickle"
-     Setfile2="incrSmallDataset.pickle"
-     Setfile3="decrSmallDataset.pickle"
+     Setfile1="randomBigDataset.pickle"
+     Setfile2="incrBigDataset.pickle"
+     Setfile3="decrBigDataset.pickle"
      mergeSortGraph1 = []
      mergeSortGraph2 = []
      mergeSortGraph3 = []
@@ -221,9 +221,9 @@ def mergeTestComparison(rep):  # indico il numero di ripetizioni ed il file sorg
 # test insertion sort with datasets defined inside
 
 def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file sorgente
-     Setfile1="randomSmallDataset.pickle"
-     Setfile2="incrSmallDataset.pickle"
-     Setfile3="decrSmallDataset.pickle"
+     Setfile1="randomBigDataset.pickle"
+     Setfile2="incrBigDataset.pickle"
+     Setfile3="decrBigDataset.pickle"
      insertionSortGraph1 = []
      insertionSortGraph2 = []
      insertionSortGraph3 = []
