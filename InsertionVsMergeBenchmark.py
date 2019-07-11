@@ -295,24 +295,23 @@ def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file 
 
 ####################################### SIMULAZIONE #####################################
 
-# insertion sort best case
 
-#testComparison(4, "incrBigDataset.pickle")
-#testComparison(900, "incrSmallDataset.pickle")
+if __name__ == "__main__":
+    # insertion sort best case
 
-# insertion sort worst case
+    #testComparison(4, "incrBigDataset.pickle")
+    #testComparison(900, "incrSmallDataset.pickle")
 
-#testComparison(4, "decrBigDataset.pickle")
-#testComparison(900, "decrSmallDataset.pickle")
+    # insertion sort worst case
 
-# average case
+    #testComparison(4, "decrBigDataset.pickle")
+    #testComparison(900, "decrSmallDataset.pickle")
 
-#testComparison(4, "randomBigDataset.pickle")
-#testComparison(2000, "randomSmallDataset.pickle")
+    # average case
 
-# same algs multiple tests
+    #testComparison(4, "randomBigDataset.pickle")
+    #testComparison(2000, "randomSmallDataset.pickle")
 
-mergeTestComparison(100)
-insertionTestComparison(4)
-
-# PER TESTARE CAMBIO I TEST CON I BIG DATASET
+    # same algs multiple tests
+    mergeTestComparison(100)
+    insertionTestComparison(4)

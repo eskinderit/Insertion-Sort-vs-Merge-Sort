@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  4 JUL 2019 11:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  11 JUL 2019 12:43
 entering extended mode
 **./Esercizio1.tex
 (Esercizio1.tex
@@ -210,85 +210,105 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {C:/Users/aleda/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (Esercizio1
 .toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 8.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 9.
+(Font)              <5> on input line 8.
 )
 \tf@toc=\write3
 \openout3 = `Esercizio1.toc'.
 
 
 [1]
-Underfull \hbox (badness 1655) in paragraph at lines 39--39
+Underfull \hbox (badness 1655) in paragraph at lines 42--42
 \OT1/cmr/m/n/10 ne at-te-so / ca-so
  []
 
-[2]
-<2.png, id=18, 642.4pt x 481.8pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--43
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--60
+
+ []
+
+[2] [3]
+<2.png, id=21, 642.4pt x 481.8pt>
 File: 2.png Graphic file (type png)
 <use 2.png>
-Package pdftex.def Info: 2.png  used on input line 51.
+Package pdftex.def Info: 2.png  used on input line 111.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
-<1.png, id=19, 642.4pt x 481.8pt>
+<1.png, id=22, 642.4pt x 481.8pt>
 File: 1.png Graphic file (type png)
 <use 1.png>
-Package pdftex.def Info: 1.png  used on input line 58.
+Package pdftex.def Info: 1.png  used on input line 118.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
- [3 <./2.png (PNG copy)> <./1.png (PNG copy)>]
-<4.png, id=23, 642.4pt x 481.8pt>
+ [4 <./2.png (PNG copy)> <./1.png (PNG copy)>]
+<4.png, id=26, 642.4pt x 481.8pt>
 File: 4.png Graphic file (type png)
 <use 4.png>
-Package pdftex.def Info: 4.png  used on input line 70.
+Package pdftex.def Info: 4.png  used on input line 130.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
 
-Underfull \hbox (badness 4024) in paragraph at lines 71--71
+Underfull \hbox (badness 4024) in paragraph at lines 131--131
 []\OT1/cmr/m/n/10 Figura 3: Mer-ge Sort vs In-ser-tion Sort per po-chi in-put (
 or-di-na-ti
  []
 
-<3.png, id=24, 642.4pt x 481.8pt>
+<3.png, id=27, 642.4pt x 481.8pt>
 File: 3.png Graphic file (type png)
 <use 3.png>
-Package pdftex.def Info: 3.png  used on input line 77.
+Package pdftex.def Info: 3.png  used on input line 137.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
 
-Underfull \hbox (badness 4193) in paragraph at lines 78--78
+Underfull \hbox (badness 4193) in paragraph at lines 138--138
 []\OT1/cmr/m/n/10 Figura 4: Mer-ge Sort vs In-ser-tion Sort per mol-ti in-put (
 or-di-na-ti
  []
 
-[4 <./4.png (PNG copy)> <./3.png (PNG copy)>]
-<6.png, id=28, 642.4pt x 481.8pt>
+[5 <./4.png (PNG copy)> <./3.png (PNG copy)>]
+<6.png, id=31, 642.4pt x 481.8pt>
 File: 6.png Graphic file (type png)
 <use 6.png>
-Package pdftex.def Info: 6.png  used on input line 86.
+Package pdftex.def Info: 6.png  used on input line 146.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
-<5.png, id=29, 642.4pt x 481.8pt>
+<5.png, id=32, 642.4pt x 481.8pt>
 File: 5.png Graphic file (type png)
 <use 5.png>
-Package pdftex.def Info: 5.png  used on input line 93.
+Package pdftex.def Info: 5.png  used on input line 153.
 (pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
- [5 <./6.png (PNG copy)> <./5.png (PNG copy)>] (Esercizio1.aux) ) 
+ [6 <./6.png (PNG copy)> <./5.png (PNG copy)>]
+<CasiMerge.png, id=37, 642.4pt x 481.8pt>
+File: CasiMerge.png Graphic file (type png)
+<use CasiMerge.png>
+Package pdftex.def Info: CasiMerge.png  used on input line 161.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+<CasiInsertion.png, id=38, 642.4pt x 481.8pt>
+File: CasiInsertion.png Graphic file (type png)
+<use CasiInsertion.png>
+Package pdftex.def Info: CasiInsertion.png  used on input line 168.
+(pdftex.def)             Requested size: 192.72148pt x 144.5411pt.
+ [7 <./CasiMerge.png (PNG copy)> <./CasiInsertion.png (PNG copy)>]
+(Esercizio1.aux) ) 
 Here is how much of TeX's memory you used:
- 2527 strings out of 493303
- 34499 string characters out of 3138857
- 104137 words of memory out of 3000000
- 6041 multiletter control sequences out of 15000+200000
+ 2540 strings out of 493303
+ 34739 string characters out of 3138857
+ 106153 words of memory out of 3000000
+ 6052 multiletter control sequences out of 15000+200000
  8790 words of font info for 31 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,10n,25p,806b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\ale
-da\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\sauter\dpi923\cmr13.pk><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb>
-Output written on Esercizio1.pdf (6 pages, 270076 bytes).
+ 41i,11n,25p,806b,216s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\aleda\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jkn
+appen\sauter\dpi923\cmr13.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb>
+Output written on Esercizio1.pdf (8 pages, 334389 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
