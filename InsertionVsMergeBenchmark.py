@@ -309,8 +309,8 @@ def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file 
 if __name__ == "__main__":
     # insertion sort best case
 
-    #testComparison(4, "incrBigDataset.pickle")
-    #testComparison(900, "incrSmallDataset.pickle")
+    testComparison(4, "incrBigDataset.pickle")
+    testComparison(900, "incrSmallDataset.pickle")
 
     # insertion sort worst case
 
@@ -319,9 +319,9 @@ if __name__ == "__main__":
 
     # average case
 
-    #testComparison(4, "randomBigDataset.pickle")
-    #testComparison(2000, "randomSmallDataset.pickle")
+    testComparison(4, "randomBigDataset.pickle")
+    testComparison(2000, "randomSmallDataset.pickle")
 
     # same algs multiple tests
-    #mergeTestComparison(1)
-    #insertionTestComparison(4)
+    mergeTestComparison(1)
+    insertionTestComparison(4)
