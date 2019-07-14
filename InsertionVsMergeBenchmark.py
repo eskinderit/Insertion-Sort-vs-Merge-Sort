@@ -135,12 +135,15 @@ def testComparison(rep,Setfile):  #indico il numero di ripetizioni ed il file so
  for z in range(0,len(Set)):
      A=Set[z]
      ElementsNum.append(len(A))
- plt.plot(ElementsNum, mergeSortGraph)
- plt.plot(ElementsNum, insertionSortGraph)
+ plt.plot(ElementsNum, mergeSortGraph,'--bo')
+ plt.plot(ElementsNum, insertionSortGraph, '--ro')
  plt.xlabel('Numero di elementi')
  plt.ylabel('Tempo di esecuzione')
  plt.title('Merge sort Vs Insertion sort Benchmark')
  plt.legend(['Merge sort', 'Insertion sort'])
+ plt.grid(True)
+ plt.xticks(ElementsNum)
+ plt.xticks(rotation=45)
  plt.show()
 
 # tests merge sort with datasets defined inside
@@ -209,13 +212,17 @@ def mergeTestComparison(rep):  # indico il numero di ripetizioni ed il file sorg
      for z in range(0, len(Set)):
          A = Set[z]
          ElementsNum.append(len(A))
-     plt.plot(ElementsNum, mergeSortGraph1)
-     plt.plot(ElementsNum, mergeSortGraph2)
-     plt.plot(ElementsNum, mergeSortGraph3)
+     plt.plot(ElementsNum, mergeSortGraph1, '--bo')
+     plt.plot(ElementsNum, mergeSortGraph2, '--ro')
+     plt.plot(ElementsNum, mergeSortGraph3, '--go')
      plt.xlabel('Numero di elementi')
      plt.ylabel('Tempo di esecuzione')
      plt.title('I casi di merge sort')
      plt.legend(['Input random', 'Input in ord. crescente', 'Input in ord. decr'])
+     plt.grid(True)
+     plt.xticks(ElementsNum)
+     plt.xticks(rotation=45)
+
      plt.show()
 
 # test insertion sort with datasets defined inside
@@ -284,13 +291,16 @@ def insertionTestComparison(rep):  # indico il numero di ripetizioni ed il file 
      for z in range(0, len(Set)):
          A = Set[z]
          ElementsNum.append(len(A))
-     plt.plot(ElementsNum, insertionSortGraph1)
-     plt.plot(ElementsNum, insertionSortGraph2)
-     plt.plot(ElementsNum, insertionSortGraph3)
+     plt.plot(ElementsNum, insertionSortGraph1, '--bo')
+     plt.plot(ElementsNum, insertionSortGraph2, '--ro')
+     plt.plot(ElementsNum, insertionSortGraph3, '--go')
      plt.xlabel('Numero di elementi')
      plt.ylabel('Tempo di esecuzione')
      plt.title('I casi di insertion sort')
      plt.legend(['Input random', 'Input in ord. crescente', 'Input in ord. decr'])
+     plt.grid(True)
+     plt.xticks(ElementsNum)
+     plt.xticks(rotation=45)
      plt.show()
 
 ####################################### SIMULAZIONE #####################################
@@ -304,8 +314,8 @@ if __name__ == "__main__":
 
     # insertion sort worst case
 
-    #testComparison(4, "decrBigDataset.pickle")
-    #testComparison(900, "decrSmallDataset.pickle")
+    testComparison(4, "decrBigDataset.pickle")
+    testComparison(900, "decrSmallDataset.pickle")
 
     # average case
 
@@ -313,5 +323,5 @@ if __name__ == "__main__":
     #testComparison(2000, "randomSmallDataset.pickle")
 
     # same algs multiple tests
-    mergeTestComparison(100)
-    insertionTestComparison(4)
+    #mergeTestComparison(1)
+    #insertionTestComparison(4)

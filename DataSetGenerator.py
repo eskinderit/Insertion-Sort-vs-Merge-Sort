@@ -52,21 +52,21 @@ def multiple_decr_vect(MultipleNumberVect, step1, multi):
 
 ##################### RANDOM BIG DATA SET #######################
 SavedDataSet = []
-multiple_random_vect(SavedDataSet, 5000, 20)
+multiple_random_vect(SavedDataSet, 5000, 10)
 pickle_out = open("randomBigDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
 
 ################### INCREASING ORD BIG DATA SET #######################
 SavedDataSet = []
-multiple_incr_vect(SavedDataSet, 5000, 20)
+multiple_incr_vect(SavedDataSet, 5000, 10)
 pickle_out = open("incrBigDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
 
 ################### DECREASING ORD BIG DATA SET ######################
 SavedDataSet = []
-multiple_decr_vect(SavedDataSet, 5000, 20)
+multiple_decr_vect(SavedDataSet, 5000, 10)
 pickle_out = open("decrBigDataset.pickle", "wb")
 pickle.dump(SavedDataSet, pickle_out)
 pickle_out.close()
